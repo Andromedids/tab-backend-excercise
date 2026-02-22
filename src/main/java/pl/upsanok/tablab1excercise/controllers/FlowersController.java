@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import pl.upsanok.tab.controllers.dto.Flower;
+import pl.upsanok.tablab1excercise.controllers.dto.Flower;
 
 @RestController()
 @CrossOrigin(origins = {"http://localhost:3000", "https://tab-front-production.up.railway.app"})
@@ -51,7 +51,7 @@ public class FlowersController {
     this.favFlower = flower.name();
     return ResponseEntity.ok(
         Flower.builder()
-            .name("dupa")
+            .name(this.favFlower)
             .build()
     );
   }

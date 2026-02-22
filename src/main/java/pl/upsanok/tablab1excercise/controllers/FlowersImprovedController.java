@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import pl.upsanok.tab.controllers.dto.Flower;
-import pl.upsanok.tab.services.FlowersService;
+import pl.upsanok.tablab1excercise.controllers.dto.Flower;
 
 @RestController()
 @CrossOrigin(origins = {"http://localhost:3000", "https://tab-front-production.up.railway.app"})
@@ -35,7 +34,7 @@ public class FlowersImprovedController {
       @RequestBody Flower flower
   ) {
     boolean result = flowersService.saveFavouriteFlowerFor(userName, flower.name());
-    return ResponseEntity.ok(Flower.builder().name("ania").build());
+    return ResponseEntity.ok(Flower.builder().name("testowa").build());
   }
 }
 
